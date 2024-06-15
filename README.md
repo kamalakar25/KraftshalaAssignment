@@ -29,42 +29,81 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Weather Application Documentation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Overview
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This weather application fetches current weather data using the OpenWeatherMap API based on user input or geolocation. It displays weather conditions, temperature, and other relevant details in a user-friendly interface. The application supports a light/dark mode toggle for improved user experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React**: Frontend JavaScript library for building user interfaces.
+- **axios**: Library for making HTTP requests.
+- **animate.css**: Library for animations.
+- **react-icons**: Icon library for displaying icons.
+- **CSS**: Custom styling for UI components.
 
-## Learn More
+## Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Weather Data Display**
+   - Displays current weather conditions, temperature, and location.
+   - Provides additional details such as weather description, feels like temperature, min/max temperature, humidity, visibility, and wind speed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **User Location**
+   - Automatically fetches weather data based on the user's geolocation upon page load.
 
-### Code Splitting
+3. **Search Functionality**
+   - Allows users to search for weather data by entering a location.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Light/Dark Mode Toggle**
+   - Switches between light and dark themes for improved readability and user preference.
 
-### Analyzing the Bundle Size
+5. **Dynamic Styling**
+   - Uses dynamic styling based on weather conditions to display appropriate icons and backgrounds.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Components
 
-### Making a Progressive Web App
+- **App Component**: Main component handling state management, API requests, and rendering UI elements.
+  - **State Variables**: Manage weather data, location, temperature, time, and theme.
+  - **Hooks**: Utilizes `useState` and `useEffect` hooks for managing state and side effects.
+  - **API Integration**: Makes use of Axios for fetching weather data from OpenWeatherMap API.
+  - **Dynamic UI**: Dynamically updates UI based on fetched data and user interactions.
+  - **Time Update**: Updates current time and date continuously.
+  - **Theme Toggle**: Implements a toggle button to switch between light and dark themes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Usage
 
-### Advanced Configuration
+1. **Getting Started**
+   - Ensure Node.js and npm are installed.
+   - Clone the project repository and install dependencies (`npm install`).
+   - Start the development server (`npm start`).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. **Using the Application**
+   - Upon loading, the application fetches weather data based on the user's geolocation.
+   - Users can manually search for weather data by entering a location in the search bar.
+   - Toggle between light and dark mode using the theme button for different viewing preferences.
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Deploy the application to a hosting service or platform like Netlify, Vercel, or GitHub Pages.
+- Ensure environment variables (like API keys) are securely handled for production deployments.
 
-### `npm run build` fails to minify
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Forecast Display**: Implement a feature to display weather forecasts for upcoming days.
+- **User Preferences**: Allow users to customize units (e.g., Celsius vs. Fahrenheit) and language preferences.
+- **Error Handling**: Enhance error handling and user feedback for failed API requests or invalid inputs.
+- **Accessibility**: Improve features like screen reader support and keyboard navigation.
+
+## Credits
+
+- **OpenWeatherMap API**: Provides weather data used in the application.
+- **React Icons**: Library for weather icons.
+- **Animate.css**: Library for animations.
+
+# Screenshots of the Application
+- **Dark Mode**
+![Screenshot 2024-06-15 191104](https://github.com/kamalakar25/KraftshalaAssignment/assets/137474117/ff76a504-d8b8-4b7a-9a93-efaed73e2696)
+- **Light Mode** 
+![Screenshot 2024-06-15 191118](https://github.com/kamalakar25/KraftshalaAssignment/assets/137474117/e57efa80-3c9e-4e05-83c1-d592534a1594)
+
