@@ -257,3 +257,34 @@ form button {
     opacity: 1; /* Full opacity */
   }
 }
+
+
+
+/* ThemeContext CSS */
+.light {
+  /* background-color: #ffffff; */
+  background-color: rgba(255, 255, 255, 0.93) !important; /* Semi-transparent background */
+  opacity: .5; /* 50% opacity */
+  color: #000000;
+}
+
+.dark {
+  /* background-color: #333333; */
+  background-color: rgba(0, 0, 0, 0.258) !important; /* Semi-transparent background */
+  opacity: .5; /* 50% opacity */
+  color: #ffffff;
+}
+
+.background-setting{
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightDark-toggle{
+  background-color: transparent;
+  border: 0px;
+  
+}

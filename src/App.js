@@ -1,6 +1,7 @@
 import 'animate.css'; // Importing animate.css for animations
 import axios from 'axios'; // Importing axios for making HTTP requests
 import { useEffect, useState } from 'react'; // Importing useEffect and useState hooks from React
+import { FiSun } from 'react-icons/fi';
 import './App.css'; // Importing custom CSS
 import thunder from './assets/thunder.png'; // Importing thunder icon
 import haze from './assets/weather-app (1).png'; // Importing haze icon
@@ -19,6 +20,7 @@ function App() {
   const [weatherCondition, setWeatherCondition] = useState('');
   const [weatherDetails, setWeatherDetails] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isDark, setDark] = useState(false);
 
   // API URL with dynamic location
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=b1d4bfa74ced4e2f24cfa94f70460251`;
@@ -80,7 +82,7 @@ function App() {
   // Fetch user's location on component mount
   useEffect(() => {
     getLocation();
-  });
+  }, []);
 
   // Function to update the current date and time
   function updateDateTime() {
@@ -137,16 +139,28 @@ function App() {
     );
   }
 
+  const onClickThemeButton = () => {
+    setDark(!isDark)
+  }
+
+  const textColor = isDark ? "light" : "dark";
+
   return (
     <div className='mainBody'>
       <div className="overlay"></div>
-      <div className="displayBox">
+      <div className={`displayBox ${textColor}`}>
         <div className='section1 animate__animated animate__fadeIn'>
-          <form action="" onSubmit={handleSubmit}>
-            <input type="text" name='search' placeholder='Enter your location' onChange={(e) => setLocation(e.target.value.toLowerCase())} />
-            <button type='submit'><i className='bx bx-search'></i></button>
-          </form>
+          <div className='background-setting'>
+            <button type="button" className='lightDark-toggle' onClick={onClickThemeButton}>
+              <FiSun className={textColor} size={28} />
+            </button>
 
+            <form action="" onSubmit={handleSubmit}>
+              <input type="text" name='search' placeholder='Enter your location' onChange={(e) => setLocation(e.target.value.toLowerCase())} />
+              <button type='submit'><i className='bx bx-search'></i></button>
+            </form>
+            
+          </div>
           {data && <div className='maindiv animate__animated animate__bounce'>
             <div className='city-temp'>
               <h2>{data?.name},{data?.sys?.country}</h2>
@@ -159,8 +173,9 @@ function App() {
 
             {weatherDetails && <h3>{weatherDetails}</h3>}
           </div>}
-
+          <p>Current Location and Time.</p>
           <div className='bottom'>
+          
             <div className='flex-col'>
               <h3>{time}</h3>
               <h3>{dayDate}</h3>
