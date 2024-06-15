@@ -11,7 +11,6 @@ function App() {
   // Defining state variables
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
-  const [userData, setUserData] = useState({});
   const [userLocation, setUserLocation] = useState('');
   const [countryCode, setCountryCode] = useState('');
   const [userTemp, setUserTemp] = useState();
@@ -81,7 +80,7 @@ function App() {
   // Fetch user's location on component mount
   useEffect(() => {
     getLocation();
-  }, []);
+  });
 
   // Function to update the current date and time
   function updateDateTime() {
