@@ -102,5 +102,8 @@ This weather application fetches current weather data using the OpenWeatherMap A
 - **Animate.css**: Library for animations.
 
 # Screenshots of the Application
-- **Dark Mode**![Screenshot 2024-06-15 191104](https://github.com/kamalakar25/KraftshalaAssignment/assets/137474117/ff76a504-d8b8-4b7a-9a93-efaed73e2696)
+- **Dark Mode**
+![Screenshot 2024-06-15 191104](https://github.com/kamalakar25/KraftshalaAssignment/assets/137474117/ff76a504-d8b8-4b7a-9a93-efaed73e2696)
+- **Light Mode** 
+![Screenshot 2024-06-15 191118](https://github.com/kamalakar25/KraftshalaAssignment/assets/137474117/e57efa80-3c9e-4e05-83c1-d592534a1594)
 
